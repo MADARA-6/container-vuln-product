@@ -1,1 +1,8 @@
-[Policy editor wireframe placeholder]
++--------------------------------------------------------------+
+| Policy - Build Gate                                          |
++--------------------------------------------------------------+
+| Rule: Block if Severity >= High OR Critical count > 0        |
+| Temporal/Env: Consider Exploit Maturity >= Functional        |
+| Scope: registries: prod/*                                    |
+| Action: [Warn] [Block] [Notify]                              |
++--------------------------------------------------------------+

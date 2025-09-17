@@ -1,1 +1,13 @@
-[Dashboard wireframe placeholder]
++--------------------------------------------------------------+
+| Container Risk - Dashboard                                   |
++--------------------------------------------------------------+
+| Filters: Registry [*]  Repo [*]  Time [Last 7d]              |
+|--------------------------------------------------------------|
+| Severity Overview      | Policy Status     | Top Repos        |
+| [Critical: ###]        | [Pass: ####]      | repo/api (45 H)  |
+| [High: ####]           | [Warn: ### ]      | repo/web (33 H)  |
+| [Medium: ####]         | [Block: ## ]      | repo/ml  (20 C)  |
+| [Low: ####]            |                   | ...              |
+|--------------------------------------------------------------|
+| Trend: Images with >= High over time (sparkline)             |
++--------------------------------------------------------------+
