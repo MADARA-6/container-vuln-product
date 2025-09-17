@@ -1,0 +1,11 @@
+{
+  "name": "Prod Gate - Block Critical/High",
+  "blockIf": {
+    "minSeverity": "High",
+    "criticalCountGreaterThan": 0
+  },
+  "consider": {
+    "exploitMaturity": "Functional"
+  },
+  "scope": "registries: prod/*"
+}

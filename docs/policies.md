@@ -12,3 +12,10 @@ Examples:
 
 ## GitHub Actions mapping
 The GitHub Actions example scans an image with Trivy and uploads SARIF; adjust severity and exit-code per policy. [Trivy Action][Workflow example]  
+
+## Examples (CLI)
+- Fail on any Critical:
+  trivy image --severity CRITICAL --exit-code 1 nginx:latest
+- Fail on High or Critical:
+  trivy image --severity HIGH,CRITICAL --exit-code 1 nginx:latest
+

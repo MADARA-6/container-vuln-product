@@ -20,3 +20,13 @@ This repository contains a PRD, low-fidelity wireframes, sample scan artifacts, 
 - Policies: docs/policies.md
 - JSON Schemas: schema/ (image.json, vulnerability.json, scan.json, policy.json)
 
+
+## Validate JSON instances
+- Install: npm install -g ajv-cli
+- Validate policy: ajv validate --spec=draft2020 -s schema/policy.json -d samples/policies/example-policy.json
+
+## Optional HTML report
+- Template path may be at /usr/local/share/trivy/templates/html.tpl depending on install.
+- Example:
+  trivy image --format template --template "@/usr/local/share/trivy/templates/html.tpl" -o samples/reports/nginx-report.html nginx:latest
+
