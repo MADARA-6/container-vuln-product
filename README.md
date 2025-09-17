@@ -15,3 +15,8 @@ This repository contains a PRD, low-fidelity wireframes, sample scan artifacts, 
 - SBOMs: samples/sbom/
 - CI example (GitHub Actions): tools/ci-examples/github-actions-trivy.yml
 
+
+## Policies and Schemas
+- Policies: docs/policies.md
+- JSON Schemas: schema/ (image.json, vulnerability.json, scan.json, policy.json)
+

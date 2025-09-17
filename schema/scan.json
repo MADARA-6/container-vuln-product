@@ -1,1 +1,17 @@
-{}
+{
+  "$schema": "https://json-schema.org/draft/2020-12/schema",
+  "title": "Scan",
+  "type": "object",
+  "required": ["scanner", "version", "scannedAt", "imageDigest", "results"],
+  "properties": {
+    "scanner": { "type": "string", "enum": ["trivy"] },
+    "version": { "type": "string" },
+    "scannedAt": { "type": "string", "format": "date-time" },
+    "imageDigest": { "type": "string" },
+    "results": {
+      "type": "array",
+      "items": { "$ref": "./vulnerability.json" }
+    }
+  },
+  "additionalProperties": false
+}

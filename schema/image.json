@@ -1,1 +1,29 @@
-{}
+{
+  "$schema": "https://json-schema.org/draft/2020-12/schema",
+  "title": "Image",
+  "type": "object",
+  "required": ["digest", "repository", "tag", "registry", "severityCounts", "lastScannedAt"],
+  "properties": {
+    "digest": { "type": "string" },
+    "repository": { "type": "string" },
+    "tag": { "type": "string" },
+    "registry": { "type": "string" },
+    "baseImage": { "type": "string" },
+    "os": { "type": "string" },
+    "severityCounts": {
+      "type": "object",
+      "properties": {
+        "critical": { "type": "integer", "minimum": 0 },
+        "high": { "type": "integer", "minimum": 0 },
+        "medium": { "type": "integer", "minimum": 0 },
+        "low": { "type": "integer", "minimum": 0 }
+      },
+      "required": ["critical", "high", "medium", "low"],
+      "additionalProperties": false
+    },
+    "highestSeverity": { "type": "string", "enum": ["None", "Low", "Medium", "High", "Critical"] },
+    "policyStatus": { "type": "string", "enum": ["Pass", "Warn", "Block"] },
+    "lastScannedAt": { "type": "string", "format": "date-time" }
+  },
+  "additionalProperties": false
+}

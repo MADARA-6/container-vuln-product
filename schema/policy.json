@@ -1,1 +1,26 @@
-{}
+{
+  "$schema": "https://json-schema.org/draft/2020-12/schema",
+  "title": "Policy",
+  "type": "object",
+  "required": ["name", "blockIf", "scope"],
+  "properties": {
+    "name": { "type": "string" },
+    "blockIf": {
+      "type": "object",
+      "properties": {
+        "minSeverity": { "type": "string", "enum": ["High", "Critical"] },
+        "criticalCountGreaterThan": { "type": "integer", "minimum": 0 }
+      },
+      "additionalProperties": false
+    },
+    "consider": {
+      "type": "object",
+      "properties": {
+        "exploitMaturity": { "type": "string", "enum": ["Unproven", "Proof-of-Concept", "Functional", "High"] }
+      },
+      "additionalProperties": true
+    },
+    "scope": { "type": "string" }
+  },
+  "additionalProperties": false
+}
